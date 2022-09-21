@@ -5,8 +5,6 @@ import './ItemCart.css';
 
 const ItemCart = ({ product }) => {
     const { removeProduct } = useContext(CartContext)
-
-
     return (
         <div className='itemCart'>
             <img src={product.img} />
