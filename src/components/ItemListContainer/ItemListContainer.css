@@ -1,0 +1,7 @@
+.centrar {
+    text-align: center;
+}
+
+.contenedor {
+    display: flex;
+}
