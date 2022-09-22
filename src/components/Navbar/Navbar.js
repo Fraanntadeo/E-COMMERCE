@@ -4,6 +4,8 @@ import Navbar from 'react-bootstrap/Navbar';
 import "./NavBar.css"
 import CartWidget from '../CartWidget/CartWidget';
 import "../../App.css";
+import { Link } from 'react-router-dom'
+
 
 function CollapsibleExample() {
     return (
@@ -13,12 +15,12 @@ function CollapsibleExample() {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="mx-auto">
-                        <Nav.Link href="/1">Fuente</Nav.Link>
-                        <Nav.Link href="/2">Procesador</Nav.Link>
-                        <Nav.Link href="/3">Mouse</Nav.Link>
-                        <Nav.Link href="/4">Gabinete</Nav.Link>
+                        <Link to="/1">Fuente</Link>
+                        <Link to="/2">Procesador</Link>
+                        <Link to="/3">Mouse</Link>
+                        <Link to="/4">Gabinete</Link>
                     </Nav>
-                    <Nav.Link href="/cart"><CartWidget /></Nav.Link>
+                    <Link to='/cart'><CartWidget/></Link>
                 </Navbar.Collapse>
             </Container>
         </Navbar>
