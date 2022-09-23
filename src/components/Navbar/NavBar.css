@@ -1,4 +1,32 @@
 .bi {
     font-size: 30px;
-    color: white;
+    color: black;
 }
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    margin: 0 0 60px 0;
+    height: 60px;
+    background-color: #f4f4f4;
+    color: #212121;
+    box-shadow: rgba(0, 102, 255, 0.7) 0px 10px 30px -10px;
+    font-weight: bold;
+}
+.nav-title {
+    color: #212121;
+    text-decoration: none;
+}
+.nav-option, .nav-widget {
+    color: #767676;
+    padding: 0 10px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.5s;
+}
+.nav-option:hover, .nav-widget:hover {
+    color: #ff0000;
+}
+
