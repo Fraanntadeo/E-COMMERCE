@@ -1,0 +1,82 @@
+.detail-card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-flow: row;
+    justify-content: center;
+}
+
+.product-img,
+.product-info {
+    padding: 20px 25px;
+}
+
+.product-info {
+    text-align: center;
+    justify-content: center;
+}
+
+.img {
+    width: 600px;
+    height: 600px;
+}
+
+.detail-title,
+.detail-price {
+    font-weight: normal;
+}
+
+.detail-price {
+    margin: 40px 0 40px 0;
+}
+
+.detail-text,
+.detail-description {
+    color: #767676;
+    margin: 5px 0 10px 0;
+}
+
+.detail-description {
+    color: #212121;
+}
+
+.detail-talles {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 0 30px 0;
+}
+
+.text-talle {
+    margin: 0;
+    padding: 10px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.text-talle-selected {
+    padding: 8px;
+    border: 2px solid #212121;
+    border-radius: 50%;
+}
+
+.add-cart {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 80px 0 0 0;
+}
+
+.add-cart-btn {
+    cursor: pointer;
+    padding: 5px 10px;
+    margin: 0 15px;
+    border: none;
+    background-color: #23232c;
+    color: #f4f4f4;
+    transition: all 0.5s;
+}
+
+.add-cart-btn:hover {
+    background-color: #212121;
+}

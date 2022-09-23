@@ -8,7 +8,6 @@ import { getFirestore, collection, getDocs, where, query } from 'firebase/firest
 export const ItemListContainer = () => {
     const [productos, setproductos] = useState([]);
     const { categoria } = useParams();
-
     useEffect(() => {
         const querydb = getFirestore();
         const queryCollection = collection(querydb, 'products');
@@ -22,15 +21,11 @@ export const ItemListContainer = () => {
                 .then(res => setproductos(res.docs.map(product => ({ id: product.id, ...product.data() }))))
         }
     }, [categoria])
-
-
-
-
     return (
         <>
             <div className="centrar">
                 <h1>CATALOGO DE PRODUCTOS</h1>
-                <div className="contenedor">
+                <div>
                     <ItemList prod={productos} />
                 </div>
             </div>

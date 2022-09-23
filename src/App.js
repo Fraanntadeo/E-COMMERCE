@@ -12,13 +12,15 @@ function App() {
   return (
     <BrowserRouter>
       <CartProvider>
-        <Navbar />
-        <Routes>
-          <Route exact path='/' element={<ItemListContainer />} />
-          <Route path='/:categoria' element={<ItemListContainer />} />
-          <Route path='/item/:id' element={<ItemDetailContainer />} />
-          <Route path='/cart' element={<Cart />} />
-        </Routes>
+        <div className="App">
+          <Navbar />
+          <Routes>
+            <Route exact path='/' element={<ItemListContainer />} />
+            <Route path='/:categoria' element={<ItemListContainer />} />
+            <Route path='/item/:id' element={<ItemDetailContainer />} />
+            <Route path='/cart' element={<Cart />} />
+          </Routes>
+        </div>
       </CartProvider>
     </BrowserRouter>
   );

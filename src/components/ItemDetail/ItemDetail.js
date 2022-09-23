@@ -3,6 +3,7 @@ import '../ItemDetail/ItemDetail.css'
 import ItemCount from '../ItemCount/ItemCount';
 import { Link } from "react-router-dom";
 import { CartContext } from "../../context/CartContext";
+import '../ItemDetail/ItemDetail.css'
 
 
 const ItemDetail = ({ item }) => {
@@ -13,25 +14,24 @@ const ItemDetail = ({ item }) => {
         addProduct(item, quantity)
     }
     return (
-        <div className="card mb-3">
-            <div className="row g-0">
-                <div className="col-md-4">
-                    <img src={item.img} className="img-fluid rounded-start" alt={item.title} />
-                </div>
-                <div className="col-md-8">
-                    <div className="card-body">
-                        <h5 className="card-title">{item.title}</h5>
-                        <p className="card-text">{item.description}</p>
-                        <p className="card-text">{item.quantity}</p>
-                        <p className='card-text'>${item.price}</p>
-                    </div>
-                    <div>
-                        {
-                            goCart
-                                ? <Link to='/cart'>Finalizar Compra</Link >
-                                : <ItemCount stock={10} initial={1} onAdd={onAdd} />
-                        }
-                    </div>
+        <div className="detail-card">
+            <div className="product-img">
+                <img src={item.img} className="img" alt="..." />
+            </div>
+            <div className="product-info">
+                <h1 className="detail-title">{item.title}</h1>
+                <p className="detail-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam qui nobis iste nisi labore odit ab obcaecati ut, magnam cumque? Suscipit perspiciatis ad impedit ullam quos rem, velit magni consequatur!</p>
+                <h2 className="detail-price">${item.price}</h2>
+                <div>
+                    {
+                        goCart
+                            ? <Link to='/cart'>
+                                <button className="add-cart-btn">
+                                    <h2 className="add-cart-text">Finalizar Compra</h2>
+                                </button>
+                            </Link >
+                            : <ItemCount stock={10} initial={1} onAdd={onAdd} />
+                    }
                 </div>
             </div>
         </div>
