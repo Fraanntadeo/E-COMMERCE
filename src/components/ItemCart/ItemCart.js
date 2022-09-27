@@ -14,7 +14,7 @@ const ItemCart = ({ product }) => {
                 <span className="counter-text">QTY:</span>
                 <div className="cart-counter">
                     <span className="cart-counter-button">-</span>
-                    <span className="cart-counter-num">{product.quantity}</span>
+                    <span className="cart-counter-num">{product.cantidad}</span>
                     <span className="cart-counter-button">+</span>
                 </div>
             </div>
