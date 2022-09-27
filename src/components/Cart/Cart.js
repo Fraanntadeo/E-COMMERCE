@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 import ItemCart from '../ItemCart/ItemCart';
 import { CartContext } from '../../context/CartContext';
 import { addDoc, collection, getFirestore } from 'firebase/firestore';
-
+import "./Cart.css"
 
 export const Cart = () => {
-  const { cart, totalPrice } = useContext(CartContext);
+  const { cart, totalPrice, clearCart } = useContext(CartContext);
 
   const order = {
     buyer: {
@@ -25,10 +25,6 @@ export const Cart = () => {
     addDoc(orderCollection, order)
       .then(({ id }) => alert(id))
   }
-
-
-
-
   if (cart.length === 0) {
     return (
       <div>
@@ -37,16 +33,16 @@ export const Cart = () => {
       </div>
     )
   }
-
   return (
     <>
+        <button onClick={clearCart} className="btn">ELIMINAR TODOS LOS PRODUCTOS</button>
       {
         cart.map(product => <ItemCart key={product.id} product={product} />)
       }
       <p>
         total:${totalPrice()}
       </p>
-      <button onClick={handleClick}>Generar orden de compra</button>
+      <button onClick={handleClick} className="btn">Generar orden de compra</button>
     </>
   )
 }

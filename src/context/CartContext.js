@@ -13,9 +13,13 @@ export const CartProvider = ({ children }) => {
         }
         console.log(cart)
     }
+    //Limpia carrito
     const clearCart = () => setCart([]);
+    //consulto si el producto esta en el carrito
     const isInCart = (id) => cart.find(product => product.id === id) ? true : false;
+    //eliminar una unidad del producto
     const removeProduct = (id) => setCart(cart.filter(product => product.id !== id))
+
     const totalPrice = () => {
         return cart.reduce((prev, act) => prev + act.quantity * act.price, 0);
     }
