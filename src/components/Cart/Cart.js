@@ -7,7 +7,6 @@ import "./Cart.css"
 
 export const Cart = () => {
   const { cart, totalPrice, clearCart } = useContext(CartContext);
-
   const order = {
     buyer: {
       name: 'Franco',
@@ -18,7 +17,6 @@ export const Cart = () => {
     items: cart.map(product => ({ id: product.id, title: product.title, price: product.price, quantity: product.quantity })),
     total: totalPrice(),
   }
-
   const handleClick = () => {
     const db = getFirestore();
     const orderCollection = collection(db, 'orders');
