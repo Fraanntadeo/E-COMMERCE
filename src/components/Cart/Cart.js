@@ -14,7 +14,7 @@ export const Cart = () => {
       phone: '123456789',
       address: 'asdasd',
     },
-    items: cart.map(product => ({ id: product.id, title: product.title, price: product.price, quantity: product.quantity })),
+    items: cart.map(product => ({ id: product.id, title: product.title, price: product.price, cantidad: product.cantidad })),
     total: totalPrice(),
   }
   const handleClick = () => {
@@ -33,7 +33,7 @@ export const Cart = () => {
   }
   return (
     <>
-        <button onClick={clearCart} className="btn">ELIMINAR TODOS LOS PRODUCTOS</button>
+      <button onClick={clearCart} className="btn">ELIMINAR TODOS LOS PRODUCTOS</button>
       {
         cart.map(product => <ItemCart key={product.id} product={product} />)
       }
